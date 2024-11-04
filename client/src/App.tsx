@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-extrabold">
+      <h1 className="text-5xl font-extrabold">
         Build stronger digital connections
       </h1>
       <p className="my-6 text-2xl text-balance text-center leading-8">
@@ -38,10 +38,12 @@ function App() {
             placeholder="https://example.com/my-long-url"
             className="mb-4"
           />
-          <Button className="font-bold font-xl">
-            <span>Get your short link </span>
-            <ArrowRight className="h-12 w-12" />
-          </Button>
+          <Link to="/login">
+            <Button className="font-bold font-xl">
+              <span>Get your short link </span>
+              <ArrowRight className="h-12 w-12" />
+            </Button>
+          </Link>
         </CardContent>
       </Card>
     </>

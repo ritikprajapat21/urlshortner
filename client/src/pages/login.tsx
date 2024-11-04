@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Link } from "react-router-dom";
 
-export function LoginPage() {
+export default function LoginPage() {
   return (
     <Card className="w-[350px]">
       <CardHeader>
@@ -27,18 +27,22 @@ export function LoginPage() {
         <form>
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Name of your project" />
+              <Label htmlFor="name">Email</Label>
+              <Input id="name" placeholder="johndoe@gmail.com" />
             </div>
             <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="framework">Framework</Label>
+              <Label htmlFor="name">Password</Label>
+              <Input
+                id="name"
+                type="password"
+                placeholder="Enter your password"
+              />
             </div>
           </div>
         </form>
       </CardContent>
       <CardFooter className="flex justify-between">
-        <Button variant="outline">Cancel</Button>
-        <Button>Deploy</Button>
+        <Button className="w-full">Login</Button>
       </CardFooter>
     </Card>
   );
